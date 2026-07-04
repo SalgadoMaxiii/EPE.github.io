@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-10">
+        <div class="card hero-card">
+            <div class="card-body p-5">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <h1 class="display-6 fw-bold mb-3">Gestión elegante para ventas de cuadros</h1>
+                        <p class="lead mb-4">Controla tus operaciones, registra ventas y revisa tus ingresos diarios con una plataforma limpia y profesional.</p>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <a class="btn btn-light text-primary fw-semibold" href="{% url 'register' %}">Crear cuenta</a>
+                            <a class="btn btn-outline-light" href="{% url 'login' %}">Ingresar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <div class="bg-white text-dark rounded-4 p-4 shadow-sm">
+                            <h5 class="fw-bold mb-2">Panel de control</h5>
+                            <p class="mb-0">Seguimiento en tiempo real de tus ventas y clientes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

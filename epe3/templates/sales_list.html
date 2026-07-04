@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card shadow">
+    <div class="card-body">
+        <h3 class="mb-3">Listado de ventas</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr><th>Cliente</th><th>Cuadro</th><th>Monto</th><th>Fecha</th></tr>
+            </thead>
+            <tbody>
+                {% for sale in sales %}
+                <tr>
+                    <td>{{ sale.client_name }}</td>
+                    <td>{{ sale.painting_title }}</td>
+                    <td>${{ sale.amount }}</td>
+                    <td>{{ sale.sale_date }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="4">No hay ventas registradas.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
